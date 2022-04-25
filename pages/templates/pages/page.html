@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}
+    {{titele}}
+{% endblock title %}
+
+{% block content %}
+    {% autoescape off %}
+        {{content}}
+    {% endautoescape %}
+    <p>
+        Page laste updated: {{ last_update|date:'D d F Y' }}
+    </p>
+{% endblock content %}
